@@ -16,6 +16,8 @@ Ela não inventa nada. Nome, número, data, citação ou qualquer detalhe factua
 
 Quando você cola um texto, ela mostra o rascunho, uma crítica curta do que ainda soa artificial e a versão final. Quando você aponta um arquivo, ela mexe só na prosa e deixa código, dados, frontmatter e destino de link intactos.
 
+Ela também vale para escrever do zero. Nesse modo a lista funciona como filtro de saída: escreve direto, varre os padrões antes de entregar e devolve só o texto, sem relatório.
+
 ## Exemplo
 
 **Antes**, um "sobre nós" gerado por IA:
@@ -109,6 +111,14 @@ Agora humaniza esse texto:
 ```
 
 A amostra tem prioridade sobre as regras de estilo, inclusive sobre a regra de travessão: se você usa travessão, ela mantém na mesma frequência.
+
+### Escrevendo do zero
+
+```
+Escreve um post de LinkedIn sobre [assunto]
+```
+
+Não precisa citar a skill. Ela entra sozinha em pedido de texto que você vai publicar ou assinar: post, artigo, legenda, e-mail, proposta, README, bio. A resposta vem só com o texto, já varrido.
 
 ### Só apontando, sem reescrever
 
@@ -206,6 +216,7 @@ Nenhum padrão isolado prova nada. O sinal é o acúmulo. A lista do parágrafo 
 
 ## Histórico de versões
 
+- **1.3.0** — A skill passou a valer também para escrever do zero, não só para reescrever. A descrição ganhou os gatilhos de escrita nova (post, artigo, e-mail, README) e o arquivo ganhou a seção "Escrevendo do zero", com a ordem de escrever direto, passar a lista antes de entregar e nunca dizer que conferiu sem ter conferido.
 - **1.2.0** — O texto que chega já com marca forte de gente passa a valer como amostra do estilo do autor, então os padrões 14 e 33 deixam de valer como regra ali. Contração ("pra", "tá", "né") entrou na lista de marcas humanas a preservar em registro informal. O padrão 25 passou a cobrir a conclusão que só repete o texto. Mais conectivos vigiados no padrão 26.
 
 - **1.1.0** — Cinco padrões novos, do 38 ao 42: pontuação importada do inglês, simetria excessiva, ausência de cena, fonte inventada e advérbio em -mente sem função. O padrão 7 ganhou aviso de que a lista não é proibição de vocabulário. A lista de falso positivo ganhou a vírgula correta e o alerta sobre detectores automáticos. Cada padrão passou a declarar se tem apoio em fonte externa ou se é heurística.

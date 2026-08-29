@@ -1,16 +1,19 @@
 ---
 name: humanizador
 description: |
-  Reescreve texto com cara de IA para soar como pessoa escrevendo, em português,
-  sem mudar o que o texto diz. Use sempre que o usuário pedir para "humanizar",
-  "tirar a cara de IA", "deixar mais natural", ou pedir revisão de post, artigo,
-  legenda, e-mail, proposta, README ou documentação que soe artificial: elogio
-  inflado, linguagem de vendas, fonte vaga, gerúndio raso, conectivo empilhado,
-  palavra batida de IA, voz passiva, enrolação ou sobra de chatbot. Cobre 42
-  padrões, preserva todas as afirmações do texto original e não inventa detalhe.
+  Escreve e reescreve texto em português do Brasil sem os vícios de IA. Use ao
+  reescrever, sempre que o usuário pedir para "humanizar", "tirar a cara de IA",
+  "deixar mais natural" ou revisar algo que soe artificial. Use também ao
+  ESCREVER DO ZERO qualquer texto em português que uma pessoa vai publicar ou
+  assinar como dela: post de rede social, artigo, legenda, e-mail, proposta,
+  release, README, documentação, roteiro, bio, descrição de produto. Cobre 42
+  padrões, entre eles travessão de aparte, "não é X, é Y", conectivo empilhado,
+  elogio inflado, fonte vaga, gerúndio raso, trio forçado, palavra batida de IA,
+  enrolação e sobra de chatbot. Preserva todas as afirmações do texto original e
+  não inventa detalhe.
 license: MIT
 metadata:
-  version: "1.2.0"
+  version: "1.3.0"
   base: blader/humanizer 2.11.2
 ---
 
@@ -30,6 +33,18 @@ Quando receber um texto para humanizar:
 4. **Acerte o tom.** Use o registro certo: formal, informal ou técnico. Só coloque personalidade quando o texto e o autor pedirem.
 
 O tipo de entrada define o que você devolve. Veja [Como devolver o resultado](#como-devolver-o-resultado). O processo de reescrita é o mesmo em todos os modos.
+
+## Escrevendo do zero
+
+Quando o texto ainda não existe, a lista vale como filtro de saída, não como conserto.
+
+1. **Escreva direto**, com a informação que você tem. Não fique tentando desviar dos 42 padrões enquanto escreve. Isso trava a frase e produz texto sem graça, que é o problema que a skill existe para resolver.
+2. **Passe a lista antes de entregar.** Cinco padrões respondem pela maioria dos escorregões em texto novo: travessão de aparte (§14), "não é X, é Y" (§9), conectivo abrindo parágrafo (§26), trio forçado (§10) e final otimista (§25). Comece por esses cinco e depois varra o resto.
+3. **Entregue só o texto.** No modo de escrita não mostre rascunho nem lista de padrões: o usuário pediu um texto, não um relatório de revisão.
+
+A regra de não inventar continua valendo e aqui pesa mais. Escrevendo do zero é fácil tapar buraco com número plausível, data aproximada ou fonte que soa certa. Use só o que o usuário deu ou o que você verificou de fato. Se faltar dado para a frase funcionar, escreva a frase mais simples e diga ao usuário o que falta.
+
+Não anuncie que passou pela lista. E nunca afirme que conferiu um texto sem ter conferido: dizer "passei pelos padrões" sem ter passado é pior que o vício que ficou.
 
 ## Imitar a voz de quem escreve
 
