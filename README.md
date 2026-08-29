@@ -16,40 +16,84 @@ Ela não inventa nada. Nome, número, data, citação ou qualquer detalhe factua
 
 Quando você cola um texto, ela mostra o rascunho, uma crítica curta do que ainda soa artificial e a versão final. Quando você aponta um arquivo, ela mexe só na prosa e deixa código, dados, frontmatter e destino de link intactos.
 
+## Exemplo
+
+**Antes**, um "sobre nós" gerado por IA:
+
+> Fundada em 2019, a TechFlow se consolidou como uma referência no cenário de soluções digitais para o varejo. Além disso, a empresa conta com uma equipe robusta de profissionais altamente qualificados, evidenciando seu compromisso com a excelência. Especialistas do setor apontam que a companhia desempenha um papel crucial na transformação digital de pequenos negócios — não apenas oferecendo tecnologia, mas construindo parcerias duradouras. Apesar dos desafios do mercado, o futuro é promissor.
+
+**Depois**:
+
+> A TechFlow foi fundada em 2019 e faz software para o varejo. O trabalho é com pequenos negócios que estão informatizando a operação.
+
+Encolheu porque quase tudo que saiu era elogio, não informação. Nove padrões dispararam nesse parágrafo:
+
+| Trecho | Padrão |
+| --- | --- |
+| "se consolidou como uma referência no cenário" | 1 (importância inflada), 4 (folheto de turismo), 7 (cenário) |
+| "Além disso" | 26 (conectivo empilhado) |
+| "equipe robusta de profissionais altamente qualificados" | 4, 7 (robusto), 42 (advérbio sem função) |
+| "evidenciando seu compromisso com a excelência" | 3 (gerúndio raso) |
+| "Especialistas do setor apontam" | 5 (fonte vaga) |
+| "desempenha um papel crucial" | 1, 7 (crucial) |
+| "— não apenas oferecendo..., mas construindo..." | 14 (travessão), 9 (não apenas X, mas Y) |
+| "Apesar dos desafios... o futuro é promissor" | 6 (desafios e perspectivas), 25 (final otimista) |
+
+Repare que a versão final não ganhou nenhum dado que não estivesse no original. "2019" e "pequenos negócios" estavam lá. Número de funcionários, nome de produto e faturamento não entram, mesmo que deixassem o texto bem mais concreto. Quando falta informação, a skill pergunta em vez de preencher.
+
 ## Instalação
 
-### Claude (app e web)
+### Claude no app, no site e no Cowork
 
-Baixe este repositório em ZIP e suba em Configurações, Customizar, Skills, botão "+", "Criar skill".
+Baixe o `humanizador.zip` na [aba Releases](https://github.com/PedroLLou/humanizador/releases/latest) e suba em **Configurações → Customizar → Skills → botão "+" → "Criar skill"**. Depois deixe o toggle ligado.
+
+Não use o botão verde "Code → Download ZIP" desta página: ele empacota o repositório inteiro, e o Claude espera um ZIP com uma pasta contendo o `SKILL.md` na raiz dela.
 
 ### Claude Code
 
+Linux e macOS:
+
 ```bash
-git clone https://github.com/SEU-USUARIO/humanizador.git
+git clone https://github.com/PedroLLou/humanizador.git
 cp -r humanizador/skills/humanizador ~/.claude/skills/
 ```
 
-Use `.claude/skills/` no lugar de `~/.claude/skills/` para instalar só em um projeto.
+Windows, no PowerShell:
 
-### Instalação manual em outros agentes
+```powershell
+git clone https://github.com/PedroLLou/humanizador.git
+Copy-Item humanizador\skills\humanizador "$env:USERPROFILE\.claude\skills\" -Recurse
+```
 
-Copie o `SKILL.md` para a pasta de skills do agente.
+Troque `~/.claude/skills/` por `.claude/skills/` dentro de um projeto para instalar só naquele projeto. Confira com `/skills` na sessão.
+
+### Outros agentes
+
+Qualquer ferramenta que carregue skills em Markdown serve: copie o `SKILL.md` para a pasta de skills dela. Se a ferramenta não tiver esse conceito, cole o conteúdo do arquivo como instrução de sistema.
 
 ## Uso
 
+O caso mais comum é colar o texto:
+
 ```
-Humaniza esse texto: [seu texto]
+Humaniza esse texto:
+
+Fundada em 2019, a TechFlow se consolidou como uma referência...
 ```
 
-Para reescrever um arquivo, aponte o caminho:
+A resposta vem em três partes: o rascunho, uma crítica curta do que ainda soa artificial e a versão final.
+
+### Em cima de um arquivo
 
 ```
 Humaniza a prosa do docs/post-de-lancamento.md
 ```
 
-### Imitar a sua voz
+Aqui ela escreve só a versão final no arquivo e mexe apenas na prosa. Bloco de código, frontmatter YAML, dados e destino de link ficam intactos.
 
-Cole uma amostra sua antes do texto a ser reescrito:
+### Imitando a sua voz
+
+Cole uma amostra sua antes do texto a reescrever:
 
 ```
 Aqui vai uma amostra da minha escrita:
@@ -59,8 +103,22 @@ Agora humaniza esse texto:
 [texto com cara de IA]
 ```
 
-A amostra tem prioridade sobre as regras de estilo, inclusive sobre a regra de travessão.
+A amostra tem prioridade sobre as regras de estilo, inclusive sobre a regra de travessão: se você usa travessão, ela mantém na mesma frequência.
 
+### Só apontando, sem reescrever
+
+```
+Passa esse texto pelos padrões do humanizador e só me diz o que dispara, sem reescrever nada.
+```
+
+Serve para aprender a enxergar os vícios em vez de terceirizar a correção.
+
+### O que ela não vai fazer
+
+- Inventar dado para o texto ficar mais concreto
+- Trocar toda palavra difícil por uma fácil, porque a lista do padrão 7 não é proibição de vocabulário
+- Deixar informal um texto que precisa ser formal, como petição, laudo ou ata
+- Apagar o seu regionalismo, a sua gíria ou a sua opinião
 ## Os 42 padrões
 
 ### Conteúdo
