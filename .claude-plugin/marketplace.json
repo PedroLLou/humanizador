@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace-manifest.json",
+  "name": "humanizador",
+  "owner": {
+    "name": "PedroLLou",
+    "url": "https://github.com/PedroLLou"
+  },
+  "description": "Instale o Humanizador como plugin do Claude Code.",
+  "plugins": [
+    {
+      "name": "humanizador",
+      "source": "./",
+      "description": "Reescreve texto com cara de IA para soar como pessoa escrevendo, em português do Brasil, sem mudar o que o texto diz.",
+      "license": "MIT",
+      "keywords": ["escrita", "revisao", "portugues", "humanizar", "prosa", "estilo"]
+    }
+  ]
+}

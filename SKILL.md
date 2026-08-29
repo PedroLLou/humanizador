@@ -10,7 +10,7 @@ description: |
   padrões, preserva todas as afirmações do texto original e não inventa detalhe.
 license: MIT
 metadata:
-  version: "1.1.0-pt-br"
+  version: "1.1.0"
   base: blader/humanizer 2.11.2
 ---
 

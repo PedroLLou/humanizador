@@ -1,0 +1,4 @@
+interface:
+  display_name: "Humanizador"
+  short_description: "Tira a cara de IA do texto em português, sem mudar o que ele diz"
+  default_prompt: "Use $humanizador para reescrever este texto na minha voz, sem alterar nenhum fato."

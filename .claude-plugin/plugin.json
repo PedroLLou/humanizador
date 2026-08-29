@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "humanizador",
+  "description": "Reescreve texto com cara de IA para soar como pessoa escrevendo, em português do Brasil, sem mudar o que o texto diz.",
+  "version": "1.1.0",
+  "author": {
+    "name": "Pedro Lourençoni Lima",
+    "url": "https://github.com/PedroLLou"
+  },
+  "homepage": "https://github.com/PedroLLou/humanizador",
+  "repository": "https://github.com/PedroLLou/humanizador",
+  "license": "MIT",
+  "keywords": ["escrita", "revisao", "portugues", "humanizar", "prosa", "estilo"],
+  "skills": ["./"]
+}

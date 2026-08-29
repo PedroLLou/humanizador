@@ -51,18 +51,23 @@ Não use o botão verde "Code → Download ZIP" desta página: ele empacota o re
 
 ### Claude Code
 
-Linux e macOS:
+O caminho mais curto é adicionar o repositório como marketplace e instalar o plugin:
+
+```
+/plugin marketplace add PedroLLou/humanizador
+/plugin install humanizador@humanizador
+```
+
+Sem plugin, clonando direto na pasta de skills. Linux e macOS:
 
 ```bash
-git clone https://github.com/PedroLLou/humanizador.git
-cp -r humanizador/skills/humanizador ~/.claude/skills/
+git clone https://github.com/PedroLLou/humanizador.git ~/.claude/skills/humanizador
 ```
 
 Windows, no PowerShell:
 
 ```powershell
-git clone https://github.com/PedroLLou/humanizador.git
-Copy-Item humanizador\skills\humanizador "$env:USERPROFILE\.claude\skills\" -Recurse
+git clone https://github.com/PedroLLou/humanizador.git "$env:USERPROFILE\.claude\skills\humanizador"
 ```
 
 Troque `~/.claude/skills/` por `.claude/skills/` dentro de um projeto para instalar só naquele projeto. Confira com `/skills` na sessão.
@@ -199,6 +204,10 @@ Os padrões 7, 9, 14, 18, 19, 20, 26, 38 e 41 têm apoio direto em fonte externa
 
 Nenhum padrão isolado prova nada. O sinal é o acúmulo. A lista do parágrafo 7 não é uma proibição de palavras: "crucial" existe no português de gente, e uma ocorrência não denuncia nada.
 
+## Histórico de versões
+
+- **1.1.0** — Cinco padrões novos, do 38 ao 42: pontuação importada do inglês, simetria excessiva, ausência de cena, fonte inventada e advérbio em -mente sem função. O padrão 7 ganhou aviso de que a lista não é proibição de vocabulário. A lista de falso positivo ganhou a vírgula correta e o alerta sobre detectores automáticos. Cada padrão passou a declarar se tem apoio em fonte externa ou se é heurística.
+- **1.0.0** — Primeira versão em português do Brasil, com 37 padrões. Exceção do travessão de diálogo, regra de título em português, conectivo empilhado no lugar do padrão de hífen do original, e dois padrões próprios da língua: cheiro de tradução do inglês e formalidade de ofício.
 ## O que mudou em relação ao original em inglês
 
 - Todos os exemplos foram reescritos em português, com as expressões que a IA realmente usa em português, não com tradução das expressões em inglês.
