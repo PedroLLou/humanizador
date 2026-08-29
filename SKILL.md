@@ -10,7 +10,7 @@ description: |
   padrões, preserva todas as afirmações do texto original e não inventa detalhe.
 license: MIT
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
   base: blader/humanizer 2.11.2
 ---
 
@@ -40,6 +40,8 @@ Se o usuário mandar uma amostra da escrita dele, analise antes de reescrever:
 3. Sem amostra, siga as regras de estilo deste documento.
 
 A amostra manda mais que as regras daqui. Se a amostra usa travessão, mantenha na mesma frequência. Não aplique o §14 como proibição.
+
+**O próprio texto pode ser a amostra.** Quando o texto que chegou já traz marca forte de gente (regionalismo, opinião assumida, primeira pessoa, detalhe concreto que só quem viveu sabe, humor, autocorreção), ele não é saída de chatbot: é escrita de alguém que quer uma revisão. Trate esse texto como a amostra de estilo do autor. Nesse caso o §14 e o §33 não valem como regra: o travessão de aparte e um "olha" no começo do parágrafo fazem parte da voz dele. Aponte o que achar e deixe a escolha com o autor, em vez de corrigir por conta.
 
 ## Personalidade só quando cabe
 
@@ -317,9 +319,15 @@ O mesmo vale dentro da frase: substantivo comum não leva maiúscula em portugu�
 **Depois:**
 > (Corte o parágrafo. Termine no último dado concreto. Se a fonte trouxer planos reais, use os planos.)
 
+O outro fecho formulaico é a conclusão que só repete o que o texto já disse, com "concluindo", "em suma" ou "diante do exposto" na frente. Corte também. Uma conclusão vale quando tira do texto algo que ainda não estava dito.
+**Antes:**
+> Concluindo, vimos que a política afeta os resultados, que o custo caiu e que a equipe ganhou previsibilidade.
+**Depois:**
+> (Corte. Quem leu o texto acabou de ler isso.)
+
 ### 26. Conectivo empilhado no começo de cada parágrafo
 
-**Palavras de alerta:** Além disso, Ademais, Outrossim, Dessa forma, Nesse sentido, Diante disso, Por fim, Em suma, Portanto, Vale lembrar
+**Palavras de alerta:** Além disso, Ademais, Outrossim, Dessa forma, Nesse sentido, Diante disso, Diante do exposto, À luz do exposto, Por conseguinte, Cabe destacar, Por fim, Em suma, Portanto, Vale lembrar
 **Problema:** o texto de IA em português abre quase todo parágrafo e quase toda frase com conectivo. Isso cria um ritmo de redação de vestibular. Um conectivo aqui e ali é normal; três ou quatro seguidos denunciam a máquina. Junte as frases ou comece pela informação.
 **Antes:**
 > Além disso, a equipe reduziu o tempo de resposta. Ademais, o custo caiu 12%. Dessa forma, o time ganhou previsibilidade. Por fim, vale ressaltar que o churn diminuiu.
@@ -525,6 +533,7 @@ Esses detalhes costumam carregar a voz de quem escreve. Preserve, a menos que at
 - **Detalhe específico e estranho.** Um endereço real, uma citação torta, uma frase como "o advogado que trabalhava em cima do meu dentista".
 - **Sentimento misto e tensão sem resolução.** "Acho que no geral é bom, mas me incomoda, e não sei explicar direito por quê."
 - **Gíria e referência datada.** Meme, gíria e piada interna presas a um ano e a um grupo. Modelo atrasa um ano ou mais nisso.
+- **Contração e fala escrita.** "pra", "tá", "cê", "né", "tô", "pro". Texto de IA quase nunca escreve assim, e por isso a tentação é "consertar" para "para", "está", "você". Em registro informal, não expanda: a forma contraída é a escolha do autor. Em texto formal, aí sim a forma plena é a certa.
 - **Regionalismo.** "uai", "oxe", "tchê", "massa", "mano". Não padronize para um português neutro de manual.
 - **Escolha consciente em primeira pessoa.** Mantenha o corte ou a palavra que o autor sabe justificar.
 - **Variação no tamanho das frases.** Escrita de gente alterna curto e longo. Texto de IA tende a um comprimento médio constante.
@@ -564,6 +573,7 @@ Fontes usadas na adaptação para o português, além das acima:
 - Marcelo Sabbatini, ["Texto chocho: como identificar a escrita da IA?"](https://iaedpraxis101.substack.com/p/texto-chocho-como-identificar-a-escrita), IAEdPraxis. Origem de "crucial" e "mergulhar" como marcadores em português, dos adjetivos genéricos, da vírgula de série e do ponto dentro das aspas.
 - Pew Research Center, ["How Much of the Internet Is Written With AI?"](https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/), agosto de 2026. Mede o crescimento do travessão, da vírgula de série, do vocabulário de IA e do paralelismo negativo. **A amostra é só de páginas em inglês**, então serve como evidência do mecanismo, não do português.
 - [Inteligência artificial na Wikimedia](https://pt.wikipedia.org/wiki/Intelig%C3%AAncia_artificial_na_Wikimedia), Wikipédia em português. Excesso de travessão, excesso de "além disso", material promocional, aspas curvas e referência inexistente.
+- Marina Semensato, ["Como saber se um texto foi feito por inteligência artificial?"](https://exame.com/tecnologia/examelab/como-saber-se-um-texto-foi-feito-por-inteligencia-artificial/), Exame, julho de 2026. Excesso de conectivo, conclusão que repete o texto, tom sem opinião, trios e o "não é X, é Y".
 
 Nível de confiança: os parágrafos 7, 9, 14, 18, 19, 20, 26, 38 e 41 têm apoio direto em fonte externa em português ou em medição publicada. Os demais vêm da lista original em inglês ou da adaptação, e valem como heurística, não como prova.
 

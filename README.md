@@ -206,6 +206,8 @@ Nenhum padrão isolado prova nada. O sinal é o acúmulo. A lista do parágrafo 
 
 ## Histórico de versões
 
+- **1.2.0** — O texto que chega já com marca forte de gente passa a valer como amostra do estilo do autor, então os padrões 14 e 33 deixam de valer como regra ali. Contração ("pra", "tá", "né") entrou na lista de marcas humanas a preservar em registro informal. O padrão 25 passou a cobrir a conclusão que só repete o texto. Mais conectivos vigiados no padrão 26.
+
 - **1.1.0** — Cinco padrões novos, do 38 ao 42: pontuação importada do inglês, simetria excessiva, ausência de cena, fonte inventada e advérbio em -mente sem função. O padrão 7 ganhou aviso de que a lista não é proibição de vocabulário. A lista de falso positivo ganhou a vírgula correta e o alerta sobre detectores automáticos. Cada padrão passou a declarar se tem apoio em fonte externa ou se é heurística.
 - **1.0.0** — Primeira versão em português do Brasil, com 37 padrões. Exceção do travessão de diálogo, regra de título em português, conectivo empilhado no lugar do padrão de hífen do original, e dois padrões próprios da língua: cheiro de tradução do inglês e formalidade de ofício.
 ## O que mudou em relação ao original em inglês
